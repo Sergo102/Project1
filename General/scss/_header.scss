@@ -1,0 +1,154 @@
+body{
+    width: 100%;
+    margin: 0px;
+}
+
+.header{
+    width: 100%;
+    height: 900px;
+    object{
+        img.header_img{
+            width: 100%;
+            height: 950px;
+        }
+    }.header_menu , ul , li{
+        display: inline-block;
+    }.header_menu{
+        position: absolute;
+        top: 20px;
+        left: 1000px;
+        ul{
+            li{
+                margin-left: 40px;
+                a{
+                    text-decoration: none;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    /* identical to box height */
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }hr{
+        width: 99%;
+        position: absolute;
+        border: 1px solid #A1A1A1;
+        left: 10px;
+        top: 80px;
+    }.header_adaptive{
+        display: none;
+        
+        width: 250px;
+        background: #A1A1A1;
+        position: fixed;
+        left: -228px;
+        top: 0px;
+        bottom: 0px;
+        transition: all ease 0.5s;
+        cursor: pointer;
+        #menu__toggle {
+            opacity: 0;
+          }
+          /* стилизуем кнопку */
+          .menu__btn {
+            display: flex; /* используем flex для центрирования содержимого */
+            align-items: center;  /* центрируем содержимое кнопки */
+            position: fixed;
+            top: 1px;
+            left: 1px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 1;
+          }
+          /* добавляем "гамбургер" */
+          .menu__btn > span,
+          .menu__btn > span::before,
+          .menu__btn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #616161;
+          }
+          .menu__btn > span::before {
+            content: '';
+            top: -6px;
+          }
+          .menu__btn > span::after {
+            content: '';
+            top: 6px;
+          }#menu__toggle:checked ~ .menu__btn > span {
+            transform: rotate(45deg);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::before {
+            top: 0;
+            transform: rotate(0);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+          #menu__toggle:checked ~ .menu__box {
+            visibility: visible;
+            left: 0;
+          }
+    }nav.adaptive_menu_on{
+      left: 0px;
+      ul{
+        display: flex;
+        flex-direction: column;
+        li{
+          a{
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+            color: #FFFFFF;
+          }
+        }
+      }
+  }.header_content{
+    margin-top: -600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 23;
+    .content_h1{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height */
+      text-align: center;
+      color: #FFFFFF;
+    }.content_h2{
+      margin-top: 0px;
+      width: 800px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 64px;
+      text-align: center;
+      color: #FFFFFF;
+    }.content_button{
+      width: 200px;
+      height: 45px;
+      background: #4985FF;
+      box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+      border-radius: 30px;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}
